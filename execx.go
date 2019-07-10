@@ -12,7 +12,7 @@
 // ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 // OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
-// Package execx provides convenience extensions to os/exec, to collect
+// Package execx provides extensions to os/exec, for the purpose of collecting
 // richer exit errors.
 package execx
 
@@ -107,7 +107,7 @@ func (e *ExitError) Cmdline() string {
 	return cmdline(e.Path, e.Args)
 }
 
-// Unwrap returns the e.ExitError.
+// Unwrap returns e.ExitError.
 func (e *ExitError) Unwrap() error {
 	return e.ExitError
 }
